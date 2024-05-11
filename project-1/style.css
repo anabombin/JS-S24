@@ -1,0 +1,593 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;  
+    /* transition:all .3s;    */
+}
+
+:root {
+    --width: 1000px;
+    --height: calc(var(--width)*0.637);
+  }
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    display: flex;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.masked{
+    height: 100vh;
+    width: 100vw;
+    background-color: #8cffa0;
+    -webkit-mask-image: url(images/world.svg);
+    mask-image: url(images/world.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+.blur {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(8px);
+    display: none;
+    transition: all .3s;
+}
+
+.dots {
+    z-index: 3;
+    position: absolute;
+    /* height: var(--height); */
+    width: var(--width);
+    height: 100%;
+    background-position: center;
+    
+}
+
+.dots-blinking {
+    animation: blinking 1s ease-in-out infinite;
+    animation-play-state: running;
+}
+
+.point:hover {
+    cursor: pointer;
+}
+
+
+/* Start of individual dot positions */
+
+.point_cascais {
+    position: absolute;
+    top: 43%;
+    left: 45%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    animation: blinking 1s ease-in-out infinite;
+    animation-play-state: paused;
+    display:show;
+}
+
+.point_dumbo {
+    position: absolute;
+    top: 42%;
+    left: 25%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_venice {
+    position: absolute;
+    top: 39%;
+    left: 51%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_thailand {
+    position: absolute;
+    top: 60%;
+    left: 82%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_cartagena {
+    position: absolute;
+    top: 59%;
+    left: 24%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_asturias {
+    position: absolute;
+    top: 41%;
+    left: 46%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_paris {
+    position: absolute;
+    top: 37%;
+    left: 49%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_pula {
+    position: absolute;
+    top: 41%;
+    left: 53%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_hochYbrig {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_lesgets {
+    position: absolute;
+    top: 39%;
+    left: 49%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_stmoritz {
+    position: absolute;
+    top: 37%;
+    left: 51%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_goldengate {
+    position: absolute;
+    top: 42%;
+    left: 8%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_atenas {
+    position: absolute;
+    top: 45%;
+    left: 46%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+.point_tenerife {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display:show;
+}
+
+
+/* name and location text at bottom of screen */
+
+.location {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 30px;
+    color: #8cffa0;
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    align-items: end;
+}
+
+.location_name {
+    color: #8cffa0;
+    font-family: 'Courier New', monospace;
+    font-size: 2vw;
+    font-style: normal;
+}
+
+.coordinates {
+    font-size: 1.5vw;
+}
+.location {
+    font-family: 'Courier New', monospace;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+/* posters & images flipping cards */
+
+.postcards {
+    z-index: 5;
+    position: absolute;
+    width: 350px;
+    height: 500px;
+    right: 50px;
+    display:none;
+    transform-style: preserve-3d;
+}
+
+.postcards:hover {
+    cursor: pointer;
+}
+
+.card-rotate {
+    transform: rotateX(360deg);
+    transition: all 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card{
+    transition: all 1s ease-in-out;
+}
+
+.card-cascais {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Cascais.jpg");
+    background-size: cover;
+    display:show;
+}
+
+.photo-cascais {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/cas-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-dumbo {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Dumbo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-dumbo {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/dumbo-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-venice {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Venice.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-venice {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/venice-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.card-thailand {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Thailand.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-thailand {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/thailand-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-cartagena {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Cartagena.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-cartagena {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/cartagena-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+
+.card-asturias {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Asturias.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-asturias {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/asturias-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-paris {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Paris.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-paris {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/paris-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.card-pula {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Pula.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-pula {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/pula-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.card-hochYbrig {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/hochYbrig.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-hochYbrig {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/hochYbrig-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-lesgets {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Les_Gets.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-lesgets {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/lesgets-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-stmoritz {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/stmoritz.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-stmoritz {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/stmoritz-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.card-goldengate {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Golden_Gate.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-goldengate {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/SF-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+
+.card-atenas {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Atenas.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-atenas {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/atenas-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-tenerife {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Tenerife.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.photo-tenerife {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/tenerife-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.grid {
+    position: absolute;
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    background-color: #8cffa0;
+    -webkit-mask-image: url(images/squares.svg);
+    mask-image: url(images/squares.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    top: 10px;
+    left: 10px;
+}
+
+.grid:hover {
+    width: 33px;
+    height: 33px;
+}
+
+.postcards-grid {
+    z-index: 5;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+}
+
+
+/* Intro card */
+.intro {
+    width: 75vw;
+    position: absolute;
+    display: flex;
+    z-index: 7;
+    background-color: #E12C2C;
+    
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 3% 10%;
+    font-family: "Londrina Solid", sans-serif;
+    color: #F9E7A7;
+    visibility: show;
+}
+
+ol {
+    font-size: 20px;
+    padding: 5% 0;
+    justify-content: center;
+}
+
+li {
+    padding: 2% 0;
+}
+
+.intro h1 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.close {
+    position: relative;
+    left: 57vw;
+    top: 10px;
+    width: 40px;
+    z-index: 8;
+}

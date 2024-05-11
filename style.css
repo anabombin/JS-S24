@@ -1,0 +1,160 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;     
+    /* border: 1px solid purple; */
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* class descriptions at top */
+
+body {
+    background-color: rgb(17, 17, 17);
+    background-size: cover;
+}
+.blur {
+    background-color: rgb(17, 17, 17);
+    opacity: 0.7;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -2;
+}
+
+.grid {
+    /* background-color: rgb(17, 17, 17); */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background-image: url("images/grid.png");
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    margin: 0px;
+    background-color: black;
+    padding: 5px 10px;
+}
+
+h4 {
+    color: rgb(188, 190, 190);
+    font-size: 9px;
+}
+
+/* main body content */
+
+.page-content {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+.about-me {
+    width: 20vw;
+    background-color: rgb(37, 37, 37);
+    padding: 5px;
+    display: show;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+/* side pannel with projects */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30vw;
+}
+
+
+/* individual projects */
+.project {
+    border: 2px solid rgb(37, 37, 37);
+    background-color: rgb(37, 37, 37);
+    padding: 5px;
+    color: rgb(188, 190, 190);
+    width: 30vw;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-name {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(17, 17, 17);
+    padding: 5px;
+    color: white;
+}
+
+.project-desc {
+    padding: 5px;
+}
+
+.project-desc > * {
+    margin-top: 8px;
+}
+
+.less:hover {
+    color: rgb(239, 110, 30);
+    cursor: pointer;
+}
+
+.name-date {
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+}
+
+p {
+    font-size:x-small;
+    font-weight: 100;
+    color: rgb(188, 190, 190);
+}
+
+ol {
+    list-style-position: inside;
+}
+
+li {
+    font-size:x-small;
+    color: rgb(188, 190, 190);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(188, 190, 190);
+}
+
+a:hover {
+    color: rgb(239, 110, 30);
+}
+
+#change {
+    display: none;
+}
+
+#gen-tool {
+    display: none;
+}
+
+#send {
+    display: none;
+}

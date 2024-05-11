@@ -1,0 +1,325 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;  
+    /* transition:all .3s;    */
+}
+
+body {
+    background-color: blue;
+}
+
+:root {
+    --width: 1000px;
+    --height: calc(var(--width)*0.637);
+  }
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.masked{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    background-color: #8cffa0;
+    -webkit-mask-image: url(images/world.svg);
+    mask-image: url(images/world.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+.blur {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    backdrop-filter: blur(8px);
+    transition: all .3s;
+}
+
+
+/* posters & images flipping cards */
+
+.postcards {
+    z-index: 5;
+    position: absolute;
+    width: 350px;
+    height: 500px;
+    right: 50px;
+    display:none;
+    transform-style: preserve-3d;
+}
+
+.postcards:hover {
+    cursor: pointer;
+}
+
+.card{
+    transition: all 1s ease-in-out;
+}
+
+.card-rotate {
+    transform: rotateX(360deg);
+    transition: all 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card-cascais {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Cascais.jpg");
+    background-size: cover;
+}
+
+.photo-cascais {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/cas-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-dumbo {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Dumbo.jpg");
+    background-size: cover;
+}
+
+.photo-dumbo {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/dumbo-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-venice {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Venice.jpg");
+    background-size: cover;
+}
+
+.photo-venice {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/venice-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.card-thailand {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Thailand.jpg");
+    background-size: cover;
+}
+
+.photo-thailand {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/thailand-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-cartagena {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Cartagena.jpg");
+    background-size: cover;
+}
+
+.photo-cartagena {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/cartagena-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+
+.card-asturias {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Asturias.jpg");
+    background-size: cover;
+}
+
+.photo-asturias {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/asturias-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-paris {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Paris.jpg");
+    background-size: cover;
+}
+
+.photo-paris {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/paris-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.card-pula {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Pula.jpg");
+    background-size: cover;
+}
+
+.photo-pula {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/pula-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.card-hochYbrig {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/hochYbrig.jpg");
+    background-size: cover;
+}
+
+.photo-hochYbrig {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/hochYbrig-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-lesgets {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Les_Gets.jpg");
+    background-size: cover;
+}
+
+.photo-lesgets {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/lesgets-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-stmoritz {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/stmoritz.jpg");
+    background-size: cover;
+}
+
+.photo-stmoritz {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/stmoritz-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.card-goldengate {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Golden_Gate.jpg");
+    background-size: cover;
+}
+
+.photo-goldengate {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/SF-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+
+.card-atenas {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Atenas.jpg");
+    background-size: cover;
+}
+
+.photo-atenas {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/atenas-photo.jpg");
+    background-size: cover;
+    display:none;
+}
+
+.card-tenerife {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/Tenerife.jpg");
+    background-size: cover;
+}
+
+.photo-tenerife {
+    width: 350px;
+    height: 500px;
+    background-image: url("images/tenerife-photo.JPG");
+    background-size: cover;
+    display:none;
+}
+
+.grid {
+    position: fixed;
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    background-color: #8cffa0;
+    -webkit-mask-image: url(images/squares.svg);
+    mask-image: url(images/squares.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    top: 10px;
+    left: 10px;
+}
+
+.grid:hover {
+    width: 33px;
+    height: 33px;
+}
+
+.postcards2 {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10vh;
+    align-items: center;
+    justify-content: space-around;
+    display:flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+}
+
+.cards{
+    margin: 10px 10px;
+}
+.cards:hover {
+    cursor:pointer;
+}
